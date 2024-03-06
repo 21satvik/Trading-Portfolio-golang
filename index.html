@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Stats</title>
+    <link rel="stylesheet" type="text/css" href="/assets/portfolio.css">
+</head>
+
+<body>
+    <!-- Form to add new coins -->
+    <div class="form-container">
+        <h2>Add New Coin</h2>
+        <form id="addCoinForm">
+            <label for="coin">Coin:</label>
+            <input type="text" id="coin" name="coin" required><br><br>
+            <label for="price">Purchase Price:</label>
+            <input type="text" id="price" name="price" required><br><br>
+            <label for="amount">Amount:</label>
+            <input type="text" id="amount" name="amount" required><br><br>
+            <button type="submit">Add Coin</button>
+        </form>
+    </div>
+
+    <!-- Form to remove coins -->
+    <div class="form-container">
+        <h2>Remove Coin</h2>
+        <form id="removeCoinForm">
+            <label for="coinToRemove">Coin:</label>
+            <input type="text" id="removeCoin" name="removeCoin" required><br><br>
+            <label for="amountToRemove">Amount to Remove:</label>
+            <input type="text" id="removeAmount" name="removeAmount" required><br><br>
+            <button type="submit">Remove Coin</button>
+        </form>
+    </div>
+
+    <h2>Portfolio Stats</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Coin</th>
+                <th>Purchase Price</th>
+                <th>Current Price</th>
+                <th>Amount</th>
+                <th>Profit/Loss Amount</th>
+                <th>Profit/Loss Percentage (%)</th>
+            </tr>
+        </thead>
+        <tbody id="portfolioTable">
+            <!-- Portfolio data will be inserted here -->
+        </tbody>
+        <tfoot>
+            <tr>
+                <th colspan="4">Total</th>
+                <td id="totalPLamount"></td>
+                <td id="totalPLpercent"></td>
+            </tr>
+        </tfoot>
+    </table>
+    <script src="/assets/scripts.js"></script>
+</body>
+
+</html>
